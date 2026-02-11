@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy 3rd Anniversary! 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  font-family:Roboto,sans-serif;
+  background:url('background.gif') center/cover fixed;
+  color:#222;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+.card{
+  padding:50px 15px;
+}
+
+.title{
+  font-family:'Lobster',cursive;
+  font-size:80px;
+  color:#222;
+  margin-bottom:20px;
+}
+
+.message-box{
+  background:white;
+  color:#222;
+  margin:30px auto;
+  padding:20px;
+  border-radius:15px;
+  max-width:700px;
+  font-size:22px;
+  font-family:'Indie Flower',cursive;
+  white-space: pre-wrap;
+  text-align:left;
+}
+
+.gallery img{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:15px;
+  margin:5px;
+  border:3px solid #ff69b4;
+}
+
+h3{
+  font-family:'Pacifico',cursive;
+  font-size:28px;
+  color:#222;
+  margin-top:40px;
+}
+
+.confetti, .flower{
+  position:fixed;
+  width:12px;
+  height:12px;
+  top:-15px;
+  animation:fall linear forwards;
+  border-radius:50%;
+}
+
+.flower{
+  width:25px;
+  height:25px;
+  background:radial-gradient(circle, #9b59b6, #8e44ad);
+  border-radius:50%;
+}
+
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(720deg);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1 class="title">
+Happy 3rd Anniversary! 🪻
+</h1>
+
+<div class="message-box">
+I’m sorry, this is not a very happy message, but I want you to know that I appreciate everything you’ve done and the effort you’ve shown, even when things weren’t easy between us. This year hasn’t been easy, and I know we haven’t been talking or seeing each other much. Even so, you stayed, tried to understand, and I want to thank you for that. Thank you for showing up when I asked you to—it meant a lot. Sometimes I feel like giving up, and I don’t know if we can get back the spark we once had, but I want to be honest about how I feel.
+
+Even though we haven’t been talking that often, and I’m not always aware of what’s happening in your life, I still hope you are happy and enjoying every moment. I may not know everything you’re going through, but I truly wish the best for you and hope life is treating you well.
+
+I know that we’re usually okay in person, but over chat we often argue or misunderstand each other. Despite that, I want to thank you for your patience, for trying to understand me, and for sticking around even when things got complicated.
+
+I’ve been thinking a lot about us and everything we’ve been through. It’s hard not to notice the quiet and the distance between us, and I know it hasn’t been simple for either of us. I appreciate the effort you’ve made, even when things were difficult, and I want you to know that I see it. Even though it hasn’t been easy, I’m grateful for you and for the moments we’ve shared—the care, the effort, and the times you’ve been there for me.
+
+I’m also sorry if there’s anything you wanted that I couldn’t give. I hope you know it was never my intention to hurt or disappoint you, and I truly wish I could have been everything you needed.
+
+I don’t know what the future holds, but I hope that, little by little, we can bring back some of the spark we had before. And if not, I hope we don’t lose the care we once had for each other. Even if things change, I want to acknowledge the effort, patience, and care we’ve both shown along the way. Thank you for being here, for listening, and for being part of my life, no matter how complicated things get. Love you! 💜
+</div>
+
+<h3>📸</h3>
+<div class="gallery">
+  <img src="favorite.jpg" alt="Favorite picture">
+</div>
+
+</div>
+
+<script>
+/* 🎊 Confetti */
+function launchConfetti(){
+  for(let i=0;i<100;i++){
+    let c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=`hsl(${Math.random()*360},100%,75%)`;
+    c.style.animationDuration=(Math.random()*3+2)+"s";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5000);
+  }
+}
+
+/* 🌸 launchFlowers */
+function launchFlowers(){
+  for(let i=0;i<15;i++){
+    let f=document.createElement("div");
+    f.className="flower";
+    f.style.left=Math.random()*100+"vw";
+    f.style.animationDuration=(Math.random()*3+2)+"s";
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),5000);
+  }
+}
+
+/* Launch confetti & flowers on load */
+window.onload=function(){
+  launchConfetti();
+  launchFlowers();
+}
+</script>
+
+</body>
+</html>
